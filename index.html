@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokeshwaran | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            overflow-x: hidden;
+            padding-top: 120px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, black, purple);
+            color: white;
+            text-align: center;
+        }
+        header {
+            width: 100%;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 40px 20px;
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 100px;
+        gap: 20px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        font-weight: normal;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .profile-img {
+            width: 300px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3), -10px -10px 20px rgba(0, 0, 0, 0.7);
+            animation: bounce 1.5s ease-in-out infinite alternate;
+    }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        }
+        .service-item img {
+            width: 180px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .contact-icons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contact-icons a {
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .contact-icons img {
+        width: 40px;
+        height: 40px;
+        filter: invert(36%) sepia(99%) saturate(500%) hue-rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .contact-icons img:hover {
+        transform: scale(1.2);
+    }
+    .skills-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .skills-container span {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .skills-container span:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .projects-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+        width: 200px;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lokeshwaran s</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I am Lokeshwaran s</h1>
+            <p class="hero-description">
+                I am a passionate Data Scientist and AI Developer with expertise in Machine Learning, Data Analysis, and Web Development. 
+                I enjoy solving complex problems using technology and building AI-driven solutions that make an impact. 
+                With a strong background in Python, Power BI, and software engineering, I continuously explore new technologies to enhance my skill set.
+            </p>
+        </div>
+        <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/me%20pro.png" alt="Profile Picture" class="profile-img">
+    </section>
+
+    <section id="skills" class="content">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Data Science</span>
+            <span>Web Development</span>
+            <span>Power BI</span>
+        </div>
+    </section>
+
+    <section id="projects" class="content">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Crop Disease Detector</h3>
+            </div>
+            <div class="project-card">
+                <h3>AI Health Assistant</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="content">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/dash.png" alt="Dashboard Design">
+                <p>Dashboard Designing in Power BI</p>
+            </div>
+            <div class="service-item">
+                <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/ml.png" alt="ML Model">
+                <p>Machine Learning Model Development</p>
+            </div>
+            <div class="service-item">
+                <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/dv.png" alt="Data Visualization">
+                <p>Data Analysis & Visualization</p>
+            </div>
+            <div class="service-item">
+                <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/full-stack-development.jpg" alt="Full Stack Development">
+                <p>Web Development & Full-Stack Solutions</p>
+            </div>
+            <div class="service-item">
+                <img src="https://github.com/lokeshwaranselvam/portfolio.io/blob/main/ai.jpg" alt="AI Solutions">
+                <p>AI-Powered Solutions & Automation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <div class="contact-icons">
+            <a href="mailto:lokeshai2005@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Mail">
+            </a>
+            <a href="https://github.com/lokeshwaranselvam" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/s-lokeshwaran-b-tech-artificial-intelligence-and-data-science-1545b3245/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+        </div>
+    </section>
+
+    
+    
+    <footer>
+        <p>&copy; 2025 Lokeshwaran. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
